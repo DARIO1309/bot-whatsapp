@@ -6,9 +6,9 @@ const app = express();
 app.use(express.json());
 
 // Suas credenciais (vamos preencher depois)
-const VERIFY_TOKEN = 'minha_senha_secreta';
-const WHATSAPP_TOKEN = 'COLE_SEU_TOKEN_DA_META_AQUI';
-const PHONE_ID = 'COLE_SEU_PHONE_ID_AQUI';
+const VERIFY_TOKEN = process.env.VERIFY_TOKEN;
+const WHATSAPP_TOKEN = process.env.WHATSAPP_TOKEN;
+const PHONE_ID = process.env.PHONE_ID;
 const ANTHROPIC_KEY = process.env.ANTHROPIC_KEY;
 
 const ai = new Anthropic({ apiKey: ANTHROPIC_KEY });
